@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 番組管理システム (Delaxplatto)
 
-## Getting Started
+テレビ番組の制作進行を管理するためのウェブアプリケーション
 
-First, run the development server:
+## 機能
 
+- 番組一覧表示と管理
+- カンバンボード形式での進捗管理
+- カレンダーでの収録・放送日程管理
+- Magic Link認証によるセキュアなアクセス
+
+## 技術スタック
+
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- Supabase (認証・データベース)
+- shadcn/ui (UIコンポーネント)
+- FullCalendar (カレンダー)
+- dnd-kit (ドラッグ&ドロップ)
+
+## 環境構築
+
+1. リポジトリのクローン:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd delaxplatto
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. 依存パッケージのインストール:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. 環境変数の設定:
+`.env.local`ファイルを作成し、以下の変数を設定:
+```
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. データベースのセットアップ:
+Supabaseのダッシュボードで`supabase/schema.sql`を実行
 
-## Learn More
+5. 開発サーバーの起動:
+```bash
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+## デプロイ
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Vercelへのデプロイ:
+```bash
+vercel
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. 本番環境変数の設定:
+Vercelのダッシュボードで環境変数を設定
 
-## Deploy on Vercel
+## ライセンス
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+MIT
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 開発者
+
+Hiroshi Kodera

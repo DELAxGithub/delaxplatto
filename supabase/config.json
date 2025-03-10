@@ -1,0 +1,36 @@
+{
+  "name": "delaxplatto",
+  "functions": {},
+  "realtime": {
+    "enabled": true
+  },
+  "auth": {
+    "enabled": true,
+    "email": {
+      "enabled": true,
+      "double_confirm_changes": true,
+      "email_templates": {
+        "action_url": "http://localhost:3000/auth/callback",
+        "invite": {
+          "subject": "番組管理システムへの招待",
+          "content": "番組管理システムへの招待が届きました。下記のリンクをクリックして登録を完了してください。"
+        },
+        "confirmation": {
+          "subject": "メールアドレスの確認",
+          "content": "下記のリンクをクリックしてメールアドレスの確認を完了してください。"
+        },
+        "recovery": {
+          "subject": "パスワードのリセット",
+          "content": "下記のリンクをクリックしてパスワードをリセットしてください。"
+        },
+        "magic_link": {
+          "subject": "番組管理システムへのログイン",
+          "content": "下記のリンクをクリックしてログインしてください。"
+        }
+      }
+    }
+  },
+  "storage": {
+    "enabled": false
+  }
+}
